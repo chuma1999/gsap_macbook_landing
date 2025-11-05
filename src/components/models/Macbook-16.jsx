@@ -13,7 +13,7 @@ import { useGLTF } from "@react-three/drei";
 import { useTexture } from "@react-three/drei";
 import { MeshBasicMaterial } from "three";
 import useMacbookStore from "../../store/index";
-import { Color } from "three";
+import { Color, SRGBColorSpace } from "three";
 import { noChangeParts } from "../../constants/index";
 
 export default function MacbookModel16(props) {
@@ -23,6 +23,8 @@ export default function MacbookModel16(props) {
   );
 
   const texture = useTexture("../../../public/screen.png");
+  texture.colorSpace = SRGBColorSpace;
+  texture.needsUpdate = true;
 
   useEffect(() => {
     scene.traverse((child) => {
@@ -121,11 +123,7 @@ export default function MacbookModel16(props) {
         material={materials.JvMFZolVCdpPqjj}
         rotation={[Math.PI / 2, 0, 0]}
       />
-      <mesh
-        geometry={nodes.Object_123.geometry}
-        material={materials.sfCQkHOWyrsLmor}
-        rotation={[Math.PI / 2, 0, 0]}
-      >
+      <mesh geometry={nodes.Object_123.geometry} rotation={[Math.PI / 2, 0, 0]}>
         <meshBasicMaterial map={texture} />
       </mesh>
       <mesh
