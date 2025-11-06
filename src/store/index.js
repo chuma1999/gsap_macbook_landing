@@ -6,9 +6,13 @@ const useMacbookStore = create((set) => ({
   scale: 0.08,
   setScale: (scale) => set({ scale }),
 
-  reset: () => set({ color: "#2e2c2e", scale: 0.08 })
+  texture: "../../public/videos/feature-1.mp4",
+  setTexture: (texture) => set({ texture }),
+
+  reset: () =>
+    set({ color: "#2e2c2e", scale: 0.08, texture: "/videos/feature-1.mp4" })
 }));
 
 export default useMacbookStore;
 
-// LAST ENDED THE TUTORIAL VIDEO AT 59 MINUTES (the tutorial video is located in the computers Videos folder)
+// LAST ENDED THE TUTORIAL VIDEO AT 1hr 38min MINUTES (the tutorial video is located in the computers Videos folder)
