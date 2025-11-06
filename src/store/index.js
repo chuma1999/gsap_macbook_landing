@@ -11,4 +11,4 @@ const useMacbookStore = create((set) => ({
 
 export default useMacbookStore;
 
-// LAST ENDED THE TUTORIAL VIDEO AT 59 MINUTES (the tutorial video is located in the computers Videos folder)
+// LAST ENDED THE TUTORIAL VIDEO AT 1hr 38min MINUTES (the tutorial video is located in the computers Videos folder)
